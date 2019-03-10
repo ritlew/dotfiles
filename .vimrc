@@ -23,6 +23,7 @@ set autoread
 set expandtab
 set termguicolors
 set clipboard=unnamedplus
+set updatetime=100
 
 " PLUGINS
 call plug#begin('~/.vim/plugged')
@@ -47,6 +48,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_powerline_fonts = 1
 let g:bufferline_echo = 0
+set signcolumn=yes
 
 let Grep_OpenQuickfixWindow=1
 let Grep_Default_Options="-I -r"
@@ -56,6 +58,8 @@ nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 " Search in files
 vnoremap <F9> y:execute 'Grep -r -I --include=\*.{c,h,C,H} ' . escape(@@, '/\') . ' .'<CR>
 vnoremap <F8> y:execute 'Grep -r -I --include=\*.{c,h,C,H} ' . escape(@@, '/\') . ' %'<CR>
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 xnoremap p pgvy
 
 function! s:FixWhitespace(line1,line2)

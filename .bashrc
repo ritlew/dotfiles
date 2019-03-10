@@ -12,6 +12,8 @@ GIT_PROMPT_SHOW_CHANGED_FILES_COUNT=0
 GIT_PROMPT_SHOW_UNTRACKED_FILES=no
 source ~/.bash-git-prompt/gitprompt.sh
 
+git config --global core.editor "vim"
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
