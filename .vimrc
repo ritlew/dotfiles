@@ -16,14 +16,14 @@ set nowrap
 set guioptions+=t
 set runtimepath+=,~/.vim,~/.vim/plugged
 set guifont=Courier_New:h9:cANSI:qDRAFT
+set encoding=utf-8
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set autoread
 set expandtab
 set termguicolors
-set clipboard=unnamedplus
-set updatetime=100
+set clipboard^=unnamed,unnamedplus
 
 " PLUGINS
 call plug#begin('~/.vim/plugged')
@@ -44,11 +44,26 @@ let ayucolor="mirage"
 colorscheme ayu 
  
 " Airline configurations
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline_powerline_fonts = 1
-let g:bufferline_echo = 0
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#formatter='unique_tail'
+let g:bufferline_echo=0
+let g:airline_theme='murmur'
+set laststatus=2
 set signcolumn=yes
+set encoding=utf-8   
+set updatetime=100
+
+if has("win32")
+    let g:airline_powerline_fonts=0
+else
+    if has("unix")
+        let g:airline_powerline_fonts=1
+  endif
+endif
+
+" gitgutter
+autocmd BufWritePost * GitGutter
+
 
 let Grep_OpenQuickfixWindow=1
 let Grep_Default_Options="-I -r"
