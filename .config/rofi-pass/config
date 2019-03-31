@@ -1,0 +1,5 @@
+# menu, autotype, copyPass, typeUser, typePass, copyUser, copyUrl, viewEntry, typeMenu, actionMenu, copyMenu, openUrl
+default_do='copyPass' 
+clip=clipboard
+clip_clear=20
+
