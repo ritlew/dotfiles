@@ -31,12 +31,14 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ayu-theme/ayu-vim'
 Plug 'bling/vim-bufferline'
 Plug 'craigemery/vim-autotag'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/VisIncr'
 Plug 'vim-scripts/a.vim'
 Plug 'vim-scripts/grep.vim'
-Plug 'vim-scripts/VisIncr'
 call plug#end()
 
 " ayu theme

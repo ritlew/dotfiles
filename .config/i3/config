@@ -173,6 +173,7 @@ bindsym $mod+r mode "resize"
 # USER MODIFICATIONS
 default_border none
 gaps inner 15
+focus_follows_mouse no
 
 ### MEDIA CONTROLS
 # Pulse Audio controls
