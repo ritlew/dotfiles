@@ -1,0 +1,15 @@
+[Added Associations]
+message/rfc822=userapp-Thunderbird-8JW4SZ.desktop;
+video/mp4=vlc.desktop;
+video/mpeg=vlc.desktop;
+video/x-matroska=vlc.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-8JW4SZ.desktop;
+
+[Default Applications]
+message/rfc822=userapp-Thunderbird-8JW4SZ.desktop
+video/mpeg=vlc.desktop;
+video/x-matroska=vlc.desktop;
+x-scheme-handler/http=brave.desktop;
+x-scheme-handler/https=brave.desktop;
+x-scheme-handler/mailto=thunderbird.desktop;
+x-scheme-handler/rocketchat=Electron.desktop
