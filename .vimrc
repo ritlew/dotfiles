@@ -10,7 +10,7 @@
 "  for MS-DOS and Win32:  $VIM\_vimrc
 "	    for OpenVMS:  sys$login:.vimrc
 
-set number relativenumber
+set number
 set autowriteall
 set nowrap
 set guioptions+=t
@@ -25,50 +25,11 @@ set expandtab
 set termguicolors
 set clipboard^=unnamed,unnamedplus
 
-" PLUGINS
-call plug#begin('~/.vim/plugged')
-Plug 'airblade/vim-gitgutter'
-Plug 'ayu-theme/ayu-vim'
-Plug 'bling/vim-bufferline'
-Plug 'craigemery/vim-autotag'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-scripts/VisIncr'
-Plug 'vim-scripts/a.vim'
-Plug 'vim-scripts/grep.vim'
-call plug#end()
-
-" ayu theme
-let ayucolor="mirage"
-colorscheme ayu 
- 
 " Airline configurations
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#formatter='unique_tail'
-let g:bufferline_echo=0
-let g:airline_theme='murmur'
 set laststatus=2
 set signcolumn=yes
 set encoding=utf-8   
 set updatetime=100
-
-if has("win32")
-    let g:airline_powerline_fonts=0
-else
-    if has("unix")
-        let g:airline_powerline_fonts=1
-  endif
-endif
-
-" gitgutter
-autocmd BufWritePost * GitGutter
-
-
-let Grep_OpenQuickfixWindow=1
-let Grep_Default_Options="-I -r"
 
 " Make double-<Esc> clear search highlights
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>

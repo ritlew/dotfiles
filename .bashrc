@@ -9,6 +9,10 @@ if [ $(command -v git) ]; then
     alias gitlog="git log --pretty=format:'%C(yellow)%h %Cred%ad %C(magenta)%an%Cgreen%d %Creset%s' --date=short"
 fi
 
+if [ $(command -v i3-sensible-terminal) ]; then
+    export TERMINAL=sakura
+fi
+
 if [ $(command -v docker) ]; then
     alias drm='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q) && docker rmi -f $(docker images -a -q)'
 fi

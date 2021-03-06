@@ -3,3 +3,7 @@ default_do='copyPass'
 clip=clipboard
 clip_clear=20
 
+_rofi () {
+    rofi -i -no-auto-select -theme breeze-dark "$@"
+}
+
